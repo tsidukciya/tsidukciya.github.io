@@ -34,8 +34,6 @@
 - [Автоматизация: Что и как можно автоматизировать?](automation.md)
 - [Какими инструментами я пользовался при написании этой книги?](book-writing.md)
 - [Заключение](conclusion.md)
-- [Благодарности](acknowledgments.md)
-- [Об авторе](about.md)
 
 Скачать в [pdf](distr/tsidukciya.pdf) или [fb2](distr/tsidukciya.fb2). Аудио версия будет доступна чуть позже.
 
