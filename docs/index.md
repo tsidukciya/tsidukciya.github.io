@@ -40,7 +40,7 @@
 
 👉 Читать бесплатно [Цидукция. Жить, а не выжимать!](https://www.litres.ru/book/artem-krotov/cidukciya-zhit-a-ne-vyzhimat-72794674/) на Литресе.
 
-👉 Связаться с автором [timmson666@mail.ru](mailto://timmson666@mail.ru).
+👉 Связаться с автором [timmson666@mail.ru](mailto:timmson666@mail.ru).
 
 [Creative Commons Attribution 4.0 International License][cc-by].
 
