@@ -1,3 +1,3 @@
 User-agent: *
 
-Disallow: /
+Sitemap: https://tsidukciya.ru/sitemap.xml

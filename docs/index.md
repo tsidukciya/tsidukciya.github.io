@@ -1,6 +1,7 @@
 # Книга "Цидукция. Жить, а не выжимать!"
+Автор Артём Кротов
 
-![cover.png](./distr/cover.jpg)
+![cover.png](./cover.png)
 
 - [Предисловие](foreword.md)
 - [Что такое продуктивность?](productivity.md)
@@ -35,9 +36,13 @@
 - [Какими инструментами я пользовался при написании этой книги?](book-writing.md)
 - [Заключение](conclusion.md)
 
-Скачать в [pdf](distr/tsidukciya.pdf) или [fb2](distr/tsidukciya.fb2). Аудио версия будет доступна чуть позже.
 
-Эта книга выпускается под лицензией [Creative Commons Attribution 4.0 International License][cc-by].
+
+👉 Читать бесплатно [Цидукция. Жить, а не выжимать!](https://www.litres.ru/book/artem-krotov/cidukciya-zhit-a-ne-vyzhimat-72794674/) на Литресе.
+
+👉 Связаться с автором [timmson666@mail.ru](mailto://timmson666@mail.ru).
+
+[Creative Commons Attribution 4.0 International License][cc-by].
 
 [![CC BY 4.0][cc-by-image]][cc-by]
 
