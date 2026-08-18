@@ -41,6 +41,14 @@
 
 👉 Читать бесплатно: [Литрес](https://www.litres.ru/book/artem-krotov/cidukciya-zhit-a-ne-vyzhimat-72794674/) | [MyBook](https://mybook.ru/author/artyom-krotov/cidukciya-zhit-a-ne-vyzhimat/).
 
+👉 Смотреть и слушать бесплатно на канале Неогенда [TG](https://t.me/neogenda) | [MAX](https://max.ru/channel_neogenda):
+- Выпуск 1 - [ВКВидео](https://vkvideo.ru/video-210997384_456240380) | [RuTube](https://rutube.ru/video/11dbbb77d1b884c80c144033bb3e1f2a/)
+- Выпуск 2 - TBD
+- Выпуск 3 - TBD
+- Выпуск 4 - TBD
+- Выпуск 5 - TBD
+- Выпуск 6 - TBD
+
 👉 Связаться с автором: [timmson666@mail.ru](mailto:timmson666@mail.ru).
 
 [Creative Commons Attribution 4.0 International License][cc-by].
