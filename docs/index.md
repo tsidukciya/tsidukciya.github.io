@@ -45,7 +45,7 @@
 
 - Выпуск 1 - [ВКВидео](https://vkvideo.ru/video-210997384_456240380) | [RuTube](https://rutube.ru/video/11dbbb77d1b884c80c144033bb3e1f2a/)
 - Выпуск 2 - [ВКВидео](https://vkvideo.ru/video-210997384_456240381) | [RuTube](https://rutube.ru/video/7601d0dd14c383a7e32bab3f8e3c1aff/)
-- Выпуск 3 - TBD
+- Выпуск 3 - [ВКВидео](https://vkvideo.ru/video-210997384_456240382) | [RuTube](https://rutube.ru/video/2d240528dd1375a529158aed9ebb1e95/)
 - Выпуск 4 - TBD
 - Выпуск 5 - TBD
 - Выпуск 6 - TBD
