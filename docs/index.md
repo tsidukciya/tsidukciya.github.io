@@ -46,9 +46,9 @@
 - Выпуск 1 - [ВКВидео](https://vkvideo.ru/video-210997384_456240380) | [RuTube](https://rutube.ru/video/11dbbb77d1b884c80c144033bb3e1f2a/)
 - Выпуск 2 - [ВКВидео](https://vkvideo.ru/video-210997384_456240381) | [RuTube](https://rutube.ru/video/7601d0dd14c383a7e32bab3f8e3c1aff/)
 - Выпуск 3 - [ВКВидео](https://vkvideo.ru/video-210997384_456240382) | [RuTube](https://rutube.ru/video/2d240528dd1375a529158aed9ebb1e95/)
-- Выпуск 4 - TBD
-- Выпуск 5 - TBD
-- Выпуск 6 - TBD
+- Выпуск 4 - [ВКВидео](https://vkvideo.ru/video-210997384_456240383) | [RuTube](https://rutube.ru/video/5eec48be431e52c0bd8a96eabbfaec31/)
+- Выпуск 5 - [ВКВидео](https://vkvideo.ru/video-210997384_456240384) | [RuTube](https://rutube.ru/video/06324f1a34c20e7cd5b521a4e8ae09e1/)
+- Выпуск 6 - [ВКВидео](https://vkvideo.ru/video-210997384_456240385) | [RuTube](https://rutube.ru/video/58a09cc3e13da8933dfb2074efd6da63/)
 
 
 👉 Связаться с автором: [timmson666@mail.ru](mailto:timmson666@mail.ru).
