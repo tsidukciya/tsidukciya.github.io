@@ -6,27 +6,27 @@ import { Features } from "./components/Features";
 import { Audience } from "./components/Audience";
 import { Chapters } from "./components/Chapters";
 import { Author } from "./components/Author";
-import { Read } from "./components/Read";
+import { Listen } from "./components/Listen";
 import { Cta } from "./components/Cta";
 import { Footer } from "./components/Footer";
 
 export default function App() {
-  useReveal();
+    useReveal();
 
-  return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Features />
-        <Audience />
-        <Chapters />
-        <Author />
-        <Read />
-        <Cta />
-      </main>
-      <Footer />
-    </>
-  );
+    return (
+        <>
+            <Header />
+            <main>
+                <Hero />
+                <About />
+                <Features />
+                <Audience />
+                <Chapters />
+                <Author />
+                <Listen />
+                <Cta />
+            </main>
+            <Footer />
+        </>
+    );
 }

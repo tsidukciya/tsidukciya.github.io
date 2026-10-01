@@ -5,7 +5,7 @@ const links = [
   { href: "#about", label: "О книге" },
   { href: "#chapters", label: "Содержание" },
   { href: "#author", label: "Автор" },
-  { href: "#read", label: "Читать" },
+  { href: "#listen", label: "Слушать" },
 ];
 
 export function Header() {

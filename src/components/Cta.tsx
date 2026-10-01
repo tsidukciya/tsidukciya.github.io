@@ -2,7 +2,7 @@ import { bookData } from "../data/bookData";
 
 export function Cta() {
   return (
-    <section className="section">
+    <section className="section" id="read">
       <div className="container">
         <div className="cta reveal">
           <h2 className="cta__title">Готовы жить, а не выжимать?</h2>
