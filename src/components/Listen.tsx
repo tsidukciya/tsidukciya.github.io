@@ -22,7 +22,7 @@ export function Listen() {
                             <span className="episode__links">
                                 <a
                                     className="episode__link"
-                                    href={e.url}
+                                    href={e.vkvideo}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={`Выпуск ${e.num} на VK Video`}
@@ -36,7 +36,7 @@ export function Listen() {
                                 </a>
                                 <a
                                     className="episode__link"
-                                    href={e.ruto}
+                                    href={e.rutube}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={`Выпуск ${e.num} на RuTube`}
@@ -52,8 +52,6 @@ export function Listen() {
                         </div>
                     ))}
                 </div>
-
-               
             </div>
         </section>
     );
