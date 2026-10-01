@@ -5,9 +5,12 @@ export function Author() {
     <section className="section section--alt" id="author">
       <div className="container">
         <div className="author__grid">
-          <div className="author__avatar reveal" aria-hidden="true">
-            АК
-          </div>
+          <img
+            className="author__avatar reveal"
+            src="/author.png"
+            alt={`Фото автора — ${bookData.author}`}
+            style={{ objectFit: "cover" }}
+          />
           <div className="reveal">
             <span className="eyebrow">Об авторе</span>
             <h2 className="author__name">{bookData.author}</h2>
