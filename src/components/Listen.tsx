@@ -25,16 +25,28 @@ export function Listen() {
                                     href={e.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label={`Выпуск ${e.num} на VK Video`}
+                                    title="VK Video"
                                 >
-                                    VK
+                                    <img
+                                        className="episode__icon"
+                                        src="/vkvideo.svg"
+                                        alt="VK Video"
+                                    />
                                 </a>
                                 <a
                                     className="episode__link"
                                     href={e.ruto}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label={`Выпуск ${e.num} на RuTube`}
+                                    title="RuTube"
                                 >
-                                    RuTube
+                                    <img
+                                        className="episode__icon"
+                                        src="/rutube.svg"
+                                        alt="RuTube"
+                                    />
                                 </a>
                             </span>
                         </div>

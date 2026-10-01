@@ -19,7 +19,7 @@ export function Footer() {
           <a href="#about">О книге</a>
           <a href="#chapters">Содержание</a>
           <a href="#author">Автор</a>
-          <a href="#read">Читать</a>
+          <a href="#listen">Слушать</a>
           <a href={`mailto:${bookData.contact}`}>{bookData.contact}</a>
         </nav>
       </div>

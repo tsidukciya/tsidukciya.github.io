@@ -543,12 +543,20 @@ button {
 }
 
 .episode__link {
-  font-size: 13px;
-  color: var(--accent);
-  padding: 4px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
   border: 1px solid var(--border);
   border-radius: 999px;
   transition: 0.18s;
+}
+
+.episode__icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
 }
 
 .episode__link:hover {
