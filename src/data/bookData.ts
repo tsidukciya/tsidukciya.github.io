@@ -2,6 +2,80 @@ import chapters from "./chapters.json";
 
 export const siteUrl = "https://tsidukciya.ru";
 
+type AuthorLink = { title: string; url: string; note?: string };
+
+// Внешние материалы автора: блок «Об авторе» и JSON-LD берут один источник,
+// чтобы ссылки на площадке и в разметке не разъезжались.
+const articles: AuthorLink[] = [
+  {
+    title:
+      "Автономность, мотивирующая цель, мастерство: зачем компаниям T-shaped специалисты",
+    url: "https://vc.ru/flood/40369-avtonomnost-motiviruyushchaya-cel-masterstvo-zachem-kompaniyam-t-shaped-specialisty-i-kak-ih-razvivat",
+    note: "VC.ru",
+  },
+  {
+    title: "Перейти пустыню: как учиться новому и добиваться целей",
+    url: "https://vc.ru/flood/40967-pereyti-pustynyu-kak-uchitsya-novomu-i-dobivatsya-celey",
+    note: "VC.ru",
+  },
+  {
+    title: "Как избавиться от потерь в процессе разработки ПО",
+    url: "https://vc.ru/u/223752-timmson/178347-kak-izbavitsya-ot-poter-v-processe-razrabotki-po",
+    note: "VC.ru",
+  },
+  {
+    title: "Куда пойти учиться на программиста: мнения представителей сфер IT",
+    url: "https://rb.ru/opinion/it-obrazovanie/",
+    note: "RB.RU",
+  },
+  {
+    title: "Стоит ли изучать старые книги по программированию: мнения экспертов",
+    url: "https://tproger.ru/experts/old-books/",
+    note: "Tproger",
+  },
+  {
+    title: "Дизайн команды",
+    url: "https://tlroadmap.io/roles/people-manager/team-management/team-design.html",
+    note: "Teamlead Roadmap",
+  },
+];
+
+const talks: AuthorLink[] = [
+  {
+    title: "Как работать головой, а не 8 часов: всё об IT в банкинге",
+    url: "https://youtu.be/pu23ju6dc-g",
+    note: " Интервью",
+  },
+  {
+    title: "Наступаем на грабли самоорганизации",
+    url: "https://youtu.be/HmHU1fgm64Y",
+    note: "AgileDays 2020",
+  },
+  {
+    title: "Вы ещё нанимаете? А мы уже учим!",
+    url: "https://youtu.be/a1gCe8eBN-s",
+    note: "DevOpsConf 2023",
+  },
+];
+
+const community: AuthorLink[] = [
+  {
+    title: "LeSS Guide на русском",
+    url: "https://less.works/",
+    note: "участие в переводе",
+  },
+  {
+    title: "Сообщество Technical Excellence",
+    url: "https://technical-excellence.ru",
+    note: "со-организатор митапов по инженерным практикам",
+  },
+  {
+    title: "Сообщество Code Retreat Russia",
+    url: "https://code-retreat-russia.github.io",
+    note: "со-ментор сообщества",
+  },
+];
+
 export const bookData = {
   title: "Цидукция",
   subtitle: "Жить, а не выжимать",
@@ -87,17 +161,28 @@ export const bookData = {
     },
     {
       q: "Кто автор книги «Цидукция»?",
-      a: "Артём Кротов — разработчик ПО с 2007 года, с 2017 года публикует статьи о продуктивности и выступает на профессиональных мероприятиях.",
+      a: "Артём Кротов — разработчик ПО с 2007 года и Скрам-мастер с 2012 года. Пишет о продуктивности и инженерных практиках на VC и Хабре, выступает на AgileDays, LeSSDay, DevOpsConf, TechLeadConf и других конференциях.",
     },
   ],
+  authorRole: "Разработчик ПО · Скрам-мастер · Спикер",
   authorBio:
-    "С 2007 на рынке разработке ПО, а с 2017 регулярно публикую статьи о своей работе. Регулярно выступаю на профессиональных мероприятиях. За последние два десятилетия освоил широкий ряд навыков в сфере разработки цифровых продуктов и накопил богатый опыт в области личной эффективности и продуктивности.",
+    "В разработке ПО с 2007 года, Скрам-мастер с 2012-го. Помогаю продуктовым группам находить глубинные проблемы и собирать для них системные решения: от визуализации потока создания ценности и ограничения WIP до TDD, парного программирования и CI в паре с разработчиком. Работаю с Владельцем Продукта над видением, стратегией и бэклогом, обучаю команды декомпозиции требований и провожу интерактивные тренинги по Scrum, Kanban и LeSS. Публикуюсь на VC и Хабре, выступаю на AgileDays, LeSSDay, DevOpsConf, TechLeadConf, ArchDays, CodeR и ITDay, со-организую митапы сообщества Technical Excellence. Участвовал в переводах LeSS Guide и Scrum Primer на русский. В жизни стараюсь следовать эмпирическому контролю, ценностям Скрама и системному мышлению.",
+  // Компетенции автора: видимый список в блоке «Об авторе» и Person.knowsAbout
+  // в JSON-LD — один источник, чтобы разметка не расходилась с контентом.
+  authorExpertise: [
+    "Java/Kotlin, Spring Boot",
+    "TS, React, Redux",
+    "TDD, парное программирование, чистый код, SOLID",
+    "Scrum, Kanban, LeSS",
+  ],
   contact: "timmson666@mail.ru",
   // Профили, которыми владеет автор: на сайте они идут с rel="me",
   // в JSON-LD попадают как Person.sameAs. Один список на оба случая.
   authorProfiles: [
-    { name: "MyBook", url: "https://mybook.ru/author/artyom-krotov/" },
-    { name: "Telegram", url: "https://t.me/neogenda" },
-    { name: "MAX", url: "https://max.ru/channel_neogenda" },
+    { name: "FB", url: "https://facebook.com/artem.v.krotov/" },
+    { name: "LinkendIn", url: "https://www.linkedin.com/in/artem-v-krotov/" },
+    { name: "Хабр", url: "https://habr.com/ru/users/timmson/" },
+    { name: "VC.ru", url: "https://vc.ru/u/223752-timmson" },
   ],
+  authorLinks: { articles, talks, community },
 };

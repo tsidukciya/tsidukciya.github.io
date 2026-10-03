@@ -511,6 +511,81 @@ button {
   border-color: var(--accent);
 }
 
+/* Развёрнутая часть блока «Об авторе»: карточки компетенций и внешних
+   ссылок. Профили выше уже закрыты rel="me", здесь — содержательные
+   упоминания (E-E-A-T), поэтому ссылки обычные, без rel="me". */
+.author__details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.author__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.author__card-title {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.author__list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.author__list li {
+  padding-left: 18px;
+  position: relative;
+}
+
+.author__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.author__refs {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.author__ref {
+  display: block;
+  color: var(--text-muted);
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.author__ref:hover {
+  color: var(--accent);
+}
+
+.author__ref-title {
+  display: block;
+}
+
+.author__ref-note {
+  display: block;
+  font-size: 13px;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+}
+
 /* Read */
 .read__grid {
   display: grid;
@@ -777,6 +852,10 @@ button {
   .author__avatar {
     width: 140px;
     height: 140px;
+  }
+
+  .author__details {
+    grid-template-columns: 1fr;
   }
 }
 

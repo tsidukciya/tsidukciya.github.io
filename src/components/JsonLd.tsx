@@ -4,10 +4,13 @@ const authorProfile = {
   "@type": "Person",
   "@id": `${siteUrl}/#author`,
   name: bookData.author,
-  jobTitle: "Разработчик ПО, автор и спикер",
+  jobTitle: "Разработчик ПО, Скрам-мастер, автор и спикер",
   email: bookData.contact,
+  description: bookData.authorBio,
   // sameAs берём из того же списка, что и ссылки с rel="me" в блоке «Об авторе».
   sameAs: bookData.authorProfiles.map((profile) => profile.url),
+  // knowsAbout повторяет видимый список компетенций — сигнал E-E-A-T.
+  knowsAbout: bookData.authorExpertise,
 };
 
 const book = {
@@ -71,6 +74,27 @@ const faq = {
   })),
 };
 
+// Публичные материалы автора (статьи и доклады) связываются с Person через @id:
+// поисковые системы видят подтверждённый опыт и экспертизу (E-E-A-T), а не
+// просто список ссылок на странице.
+const authorWorks = [
+  ...bookData.authorLinks.articles.map((item) => ({
+    "@type": "Article",
+    name: item.title,
+    url: item.url,
+    inLanguage: "ru",
+    author: { "@id": `${siteUrl}/#author` },
+  })),
+  ...bookData.authorLinks.talks.map((item) => ({
+    "@type": "VideoObject",
+    name: item.title,
+    description: `Доклад ${bookData.author}${item.note ? ` — ${item.note}` : ""}.`,
+    url: item.url,
+    inLanguage: "ru",
+    author: { "@id": `${siteUrl}/#author` },
+  })),
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -85,6 +109,7 @@ const jsonLd = {
     authorProfile,
     book,
     faq,
+    ...authorWorks,
     ...videos,
   ],
 };
