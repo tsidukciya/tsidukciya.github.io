@@ -36,7 +36,20 @@ export function Hero() {
         </div>
 
         <div className="hero__cover">
-          <img src="/cover.png" alt="Обложка книги «Цидукция. Жить, а не выжимать»" />
+          {/* LCP-элемент первого экрана: AVIF/WebP + явные размеры против CLS. */}
+          <picture>
+            <source type="image/avif" srcSet="/cover.avif" />
+            <source type="image/webp" srcSet="/cover.webp" />
+            <img
+              src="/cover.png"
+              alt="Обложка книги «Цидукция. Жить, а не выжимать»"
+              width={500}
+              height={625}
+              fetchPriority="high"
+              loading="eager"
+              decoding="sync"
+            />
+          </picture>
         </div>
       </div>
     </section>

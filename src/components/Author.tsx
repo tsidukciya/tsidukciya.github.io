@@ -5,12 +5,20 @@ export function Author() {
     <section className="section section--alt" id="author">
       <div className="container">
         <div className="author__grid">
-          <img
-            className="author__avatar reveal"
-            src="/author.png"
-            alt={`Фото автора — ${bookData.author}`}
-            style={{ objectFit: "cover" }}
-          />
+          <picture className="reveal">
+            <source type="image/avif" srcSet="/author.avif" />
+            <source type="image/webp" srcSet="/author.webp" />
+            <img
+              className="author__avatar"
+              src="/author.png"
+              alt={`Фото автора — ${bookData.author}`}
+              width={180}
+              height={180}
+              loading="lazy"
+              decoding="async"
+              style={{ objectFit: "cover" }}
+            />
+          </picture>
           <div className="reveal">
             <span className="eyebrow">Об авторе</span>
             <h2 className="author__name">{bookData.author}</h2>

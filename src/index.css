@@ -45,6 +45,9 @@ a {
 
 img {
   max-width: 100%;
+  /* Атрибуты width/height должны давать только aspect-ratio (защита от CLS),
+     а не жёсткую высоту: иначе резиновая ширина в CSS сплющивает картинку. */
+  height: auto;
   display: block;
 }
 
@@ -436,19 +439,19 @@ button {
   align-items: center;
 }
 
+.author__grid picture {
+  display: block;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
 .author__avatar {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), #8a5a2b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 64px;
-  font-weight: 700;
-  color: #1a1206;
-  flex-shrink: 0;
 }
 
 .author__name {
@@ -632,16 +635,83 @@ button {
   color: var(--accent);
 }
 
-/* Reveal animation */
-.reveal {
+/* FAQ */
+.faq__list {
+  max-width: 760px;
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq__q {
+  cursor: pointer;
+  list-style: none;
+  padding: 20px 40px 20px 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--font-serif);
+  position: relative;
+}
+
+.faq__q::-webkit-details-marker {
+  display: none;
+}
+
+.faq__q::after {
+  content: "+";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent);
+  font-size: 22px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.faq__item[open] .faq__q::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.faq__a {
+  color: var(--text-muted);
+  font-size: 16px;
+  padding: 0 0 22px;
+  max-width: 660px;
+}
+
+/* Reveal animation.
+   Скрыт по умолчанию может остаться только при работающем JS (класс .js в main.tsx),
+   иначе без IntersectionObserver страница визуально пустая — и для краулера, и для пользователя. */
+.js .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.reveal.is-visible {
+.js .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero__cover img,
+  .btn,
+  .feature,
+  .platform {
+    transition: none;
+  }
 }
 
 /* Responsive */
@@ -666,10 +736,10 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .author__grid picture,
   .author__avatar {
     width: 140px;
     height: 140px;
-    font-size: 52px;
   }
 }
 

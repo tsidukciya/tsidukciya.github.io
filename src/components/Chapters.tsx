@@ -12,7 +12,8 @@ export function Chapters() {
 
         <div className="toc__grid reveal">
           {bookData.chapters.map((c) => (
-            <div className="toc__item" key={c.num}>
+            // Якорь даёт внутренние ссылки и перелинковку: на главу можно сослаться напрямую.
+            <div className="toc__item" id={`chapter-${c.num}`} key={c.num}>
               <span className="toc__num">{String(c.num).padStart(2, "0")}</span>
               <span className="toc__title">{c.title}</span>
             </div>
