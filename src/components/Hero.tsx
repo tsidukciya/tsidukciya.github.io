@@ -6,8 +6,18 @@ export function Hero() {
       <div className="container hero__grid">
         <div className="hero__content">
           <span className="eyebrow">Книга Артёма Кротова · {bookData.year}</span>
-          <h1 className="hero__title">{bookData.title}</h1>
-          <p className="hero__subtitle">{bookData.subtitle}</p>
+          {/* h1 несёт ключевую фразу, а не только выдуманное название (SEO.md):
+              «Цидукция» сама по себе не содержит ни одного поискового запроса. */}
+          <h1 className="hero__title">
+            {bookData.title}
+            <span className="hero__keywords">
+              {" "}
+              — книга о продуктивности для «цифровых» профессий
+            </span>
+          </h1>
+          {/* Подзаголовок — заголовок второго уровня, иначе «Жить, а не выжимать»
+              остаётся обычным <p> и не учитывается как семантическая структура. */}
+          <h2 className="hero__subtitle">{bookData.subtitle}</h2>
           <p className="hero__lead">{bookData.tagline}</p>
 
           <div className="hero__actions">

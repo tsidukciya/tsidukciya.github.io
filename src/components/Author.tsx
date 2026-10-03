@@ -24,6 +24,21 @@ export function Author() {
             <h2 className="author__name">{bookData.author}</h2>
             <p className="author__role">Разработчик · Автор · Спикер</p>
             <p className="author__bio">{bookData.authorBio}</p>
+            {/* rel="me" заявляет эти профили как принадлежность автора:
+                то же самое дублируется в Person.sameAs (см. JsonLd.tsx). */}
+            <p className="author__links">
+              {bookData.authorProfiles.map((profile) => (
+                <a
+                  className="author__link"
+                  key={profile.url}
+                  href={profile.url}
+                  target="_blank"
+                  rel="me noopener noreferrer"
+                >
+                  {profile.name}
+                </a>
+              ))}
+            </p>
           </div>
         </div>
       </div>
