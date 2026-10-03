@@ -261,6 +261,16 @@ button {
   font-weight: 400;
 }
 
+/* Ключевая часть h1: визуально уточнение, в разметке — один заголовок с «Цидукцией». */
+.hero__keywords {
+  font-family: var(--font-sans);
+  font-size: clamp(17px, 2.1vw, 25px);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
 .hero__lead {
   font-size: clamp(16px, 2vw, 19px);
   color: var(--text-muted);
@@ -472,6 +482,33 @@ button {
   color: var(--text-muted);
   font-size: 17px;
   max-width: 640px;
+}
+
+/* Профили автора. Ссылки идут с rel="me" и дублируются в JSON-LD sameAs —
+   это подтверждает владение аккаунтами (E-E-A-T для поисковых систем). */
+.author__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.author__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--text-muted);
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.author__link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 /* Read */
@@ -787,5 +824,53 @@ button {
 
   .quote {
     padding: 24px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * Текстовый дубль для краулеров без JS (вкладывается плагином noscript-seo
+ * из vite.config.ts). Виден только браузерам с выключенным JavaScript,
+ * поэтому без дизайна — лишь бы читалось. Убрать вместе с плагином,
+ * когда страница станет статической (SSG).
+ * ----------------------------------------------------------------------- */
+.noscript-seo {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+.noscript-seo h1 {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.noscript-seo h2 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  margin: 32px 0 12px;
+}
+
+.noscript-seo p {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.noscript-seo ol {
+  padding-left: 24px;
+  color: var(--text-muted);
+  columns: 2;
+  column-gap: 32px;
+}
+
+.noscript-seo a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .noscript-seo ol {
+    columns: 1;
   }
 }

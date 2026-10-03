@@ -6,11 +6,8 @@ const authorProfile = {
   name: bookData.author,
   jobTitle: "Разработчик ПО, автор и спикер",
   email: bookData.contact,
-  sameAs: [
-    "https://mybook.ru/author/artyom-krotov/",
-    "https://t.me/neogenda",
-    "https://max.ru/channel_neogenda",
-  ],
+  // sameAs берём из того же списка, что и ссылки с rel="me" в блоке «Об авторе».
+  sameAs: bookData.authorProfiles.map((profile) => profile.url),
 };
 
 const book = {
